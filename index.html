@@ -42,13 +42,14 @@
             let tbl1 = document.getElementById('dsMenu1Table');
             var DSButton1 = [
                 new MenuButton("https://mail.mailinh.vn/",'Mai Linh mail','mail.jpg','15px'),
+                new MenuButton("https://chat.zalo.me",'Zalo','zalo.png','15px'),                
                 new MenuButton("https://mailinhnamdinh.github.io/tinh-cuoc/",'Bảng giá MLNĐ','giacuoc.png','18px'),
                 new MenuButton("http://qlpt.pvcgo.net",'QLPT MLNĐ','qlpt.png','15px'),
                 new MenuButton("https://pvcgo.great-site.net/dongphuc/",'Quản lý đồng phục','dongphuc.png','15px'),
                 new MenuButton("http://mailinhnamdinh.github.io/music-player-html",'CD Nhạc ML','cd.png','15px')
             ];
       
-            for (let i=1; i < DSButton1.length; i= i +2)
+            for (let i=0; i < DSButton1.length; i= i +2)
             {
                 let tr = document.createElement('tr');
                 let td1 = document.createElement('td');
@@ -135,7 +136,8 @@ new MenuButton("http://adminninhbinh.mailinhonline.vn", "MLO Ninh Bình", "qlptm
             <script>
                 let DSButton22 = [
 new MenuButton("https://drivercare.mailinh.vn/", "DRIVER CARE", "", ""),
-                    new MenuButton("http://apps.mailinh.vn/ops/", "QC31 Xử lý, lưu", "", ""),                    
+                    new MenuButton("http://apps.mailinh.vn/ops/", "QC31 Xử lý, lưu", "", ""),                    
+
     new MenuButton("https://mailinhnamdinh.github.io/hop-online/", "Hướng dẫn HỌP ONLINE", "", "")
                 ];
 
@@ -203,5 +205,6 @@ new MenuButton("https://drivercare.mailinh.vn/", "DRIVER CARE", "", ""),
 </div>
 <script src="index_files/js/pannel.js?v=100001"></script>
 <script src="index_files/navButton.js?v=dev5"></script>
+
 
 

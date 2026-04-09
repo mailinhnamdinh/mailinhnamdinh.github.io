@@ -18,7 +18,7 @@ html
 
     .container
     {
-        margin-top:100px;
+        margin-top:50px;
         display:grid;
         grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
         gap:30px; /*khoảng cách dọc ngang các pannel */
@@ -26,7 +26,11 @@ html
     }
     @media only screen and (max-width:576px)
     {
-        margin-top:60px;
+        .container 
+        {
+            margin-top:30px;
+            gap:0px;
+        }
     }
 
         .pannel
@@ -36,6 +40,13 @@ html
             border-radius: 15px;
             padding: 20px;
             box-shadow: 5px 6px 0 rgba(0,0,0,0.3);
+        }
+        @media only screen and (max-width:576px)
+        {
+            .pannel
+            {
+                margin-top:30px;
+            }
         }
 
             .pannel-grid

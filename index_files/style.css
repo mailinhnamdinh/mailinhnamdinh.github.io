@@ -1,25 +1,45 @@
+/*reset*/
 .{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
+a 
+{
+    text-decoration:none;
+}
+
+/*reset end*/
 
 html
 {
     background-image: linear-gradient(to bottom, #fff, #0abf58);
 }
 
+    .container
+    {
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+        gap:30px; /*khoảng cách dọc ngang các pannel */
+        padding:30px;
+    }
 
-a 
-{
-    text-decoration:none;
-}
+        .pannel
+        {
+            background:white;
+            border:1px solid rgba(0,0,0,0.2);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 5px 6px 0 rgba(0,0,0,0.3);
+        }
+    
+
 
 .appButton
 {
     background-color: #fff;
     color:rgba(0,0,0,1);
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid rgba(0,0,0,0.2);
     
     width: 80%;

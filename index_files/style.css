@@ -20,7 +20,7 @@ html
     {
         margin-top:50px;
         display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
         gap:30px; /*khoảng cách dọc ngang các pannel */
         padding:30px;
     }

@@ -1,6 +1,6 @@
 class MenuButton
 {
-    constructor (pannelStt , id, link,text,imageSrc,imageWidth)
+    constructor (pannelStt , id, link,text,imageSrc,imageWidth="", imageHeight="")
     {
         this.pannelStt = pannelStt;
         this.id = id;
@@ -8,6 +8,7 @@ class MenuButton
         this.text = text;
         this.imageSrc = imageSrc;
         this.imageWidth = imageWidth;
+        this.imageHeight = imageHeight;
     }
 
     toElement()
@@ -16,9 +17,12 @@ class MenuButton
         aa.href = this.link;
         let divv = document.createElement('div');
         divv.className = 'appButton';
+
+        let divImg = document.createElement('div');
         if (this.imageSrc == '')
         {
-
+            divImg.innerHTMl = "<span style='height:15px;'>&nbsp;</span>";
+            divv.appendChild(divImg);
         }
         else
         {
@@ -28,9 +32,20 @@ class MenuButton
             {
                 img.style.width = this.imageWidth;
             }
-            divv.appendChild(img);
+
+            if (this.imageHeight !== '')
+            {
+                img.style.height = this.imageHeight;
+            }
+
+            divImg.appendChild(img);
+            divv.appendChild(divImg);
+            
         }
-        divv.appendChild(document.createTextNode(this.text));
+
+        let divText = document.createElement('div');
+        divText.appendChild(document.createTextNode(this.text));
+        divv.appendChild(divText);
         aa.appendChild(divv);
 
         aa.addEventListener('click', (e) => {
@@ -64,9 +79,6 @@ function renderFavoriteButtons()
 
     // Lấy 6 phần tử đầu tiên
     const top6 = sortedEntries.slice(0, 6);
-    // Log ra 6 key có value lớn nhất
-    console.log('Top 6 keys with highest values:', top6.map(([id, count]) => id));
-
     favoriteMenu.innerHTML = ''; // Xóa hết button cũ
 
     // Render button mới theo thứ tự top 6

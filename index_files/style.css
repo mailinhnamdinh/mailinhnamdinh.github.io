@@ -113,7 +113,7 @@ body
 {
     margin-top:20px;
     display:grid;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     gap:30px; /*khoảng cách dọc ngang các pannel */
     padding:30px;

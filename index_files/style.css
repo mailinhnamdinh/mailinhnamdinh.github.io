@@ -113,7 +113,7 @@ body
 {
     margin-top:20px;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
     justify-content: center;
     gap:30px; /*khoảng cách dọc ngang các pannel */
     padding:30px;
@@ -122,8 +122,6 @@ body
 {
     .container 
     {
-        display: flex;
-        flex-wrap: wrap;
         margin-top:0px;
         gap:0px;
         padding:0px;

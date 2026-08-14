@@ -122,6 +122,8 @@ body
 {
     .container 
     {
+        display: flex;
+        flex-wrap: wrap;
         margin-top:0px;
         gap:0px;
         padding:0px;

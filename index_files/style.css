@@ -113,8 +113,8 @@ body
 {
     margin-top:20px;
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    justify-items: center;
+    grid-template-columns: repeat((3, 260px);
+    justify-content: center;
     gap:30px; /*khoảng cách dọc ngang các pannel */
     padding:30px;
 }

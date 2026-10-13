@@ -62,6 +62,7 @@ class MenuButton
     {        
         let countKey = 'pvcMenuClick_count';
         let countMap = JSON.parse(localStorage.getItem(countKey))  || {};
+        console.log(countMap);
         countMap[this.id] = (countMap[this.id] || 0) + 1;
         localStorage.setItem(countKey, JSON.stringify(countMap));
         renderFavoriteButtons();

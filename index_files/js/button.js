@@ -69,8 +69,30 @@ class MenuButton
     }
 }
 
+
+function clearOldButtonCache()
+{
+    console.log('cleared old button');
+    if (DSButton.length > 0)
+    {
+        let danhSachId = new Set(DSButton.map(bt => bt.id));
+        let countKey = 'pvcMenuClick_count';
+        let countMap = JSON.parse(localStorage.getItem(countKey))  || {};
+        Object.keys(countMap).forEach(key => {
+            if (!danhSachId.has(key))
+            {
+                delete countMap[key];
+            }
+        });
+        localStorage.setItem(countKey, JSON.stringify(countMap));
+    }    
+}
+
+
+
 function renderFavoriteButtons()
 {
+    clearOldButtonCache();
     favoriteMenu = document.getElementById('favoriteMenu');
     let countKey = 'pvcMenuClick_count';
     let countMap = JSON.parse(localStorage.getItem(countKey)) || {};
